@@ -1,0 +1,110 @@
+{
+	"info": {
+		"_postman_id": "bb64f440-9250-47f6-bca5-84de651b1f4d",
+		"name": "[Blarlo] Pluglin 2023",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "10064267"
+	},
+	"item": [
+		{
+			"name": "Config",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://52.47.124.82/config",
+					"protocol": "http",
+					"host": [
+						"52",
+						"47",
+						"124",
+						"82"
+					],
+					"path": [
+						"config"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Contents",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://52.47.124.82/contents?offset=99",
+					"protocol": "http",
+					"host": [
+						"52",
+						"47",
+						"124",
+						"82"
+					],
+					"path": [
+						"contents"
+					],
+					"query": [
+						{
+							"key": "limit",
+							"value": "1",
+							"disabled": true
+						},
+						{
+							"key": "offset",
+							"value": "99"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Show Content",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}{{base_api}}contents/13?language=pt",
+					"host": [
+						"{{url}}{{base_api}}contents"
+					],
+					"path": [
+						"13"
+					],
+					"query": [
+						{
+							"key": "language",
+							"value": "pt"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Show Contents from a Category",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}{{base_api}}categories/6/contents?languague=pt",
+					"host": [
+						"{{url}}{{base_api}}categories"
+					],
+					"path": [
+						"6",
+						"contents"
+					],
+					"query": [
+						{
+							"key": "languague",
+							"value": "pt"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
